@@ -1,0 +1,375 @@
+/* ...CSS từ <style> trong <head>... */
+:root {
+    --swiper-theme-color: #007aff
+}
+
+html, body {
+    /* Đảm bảo không tràn ngang */
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    /* ...existing code... */
+}
+
+body {
+    background-color: #030014;
+    color: #fff;
+    font-family: Inter V, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+    overflow-y: hidden;
+    /* width: 100% */ /* Đã xử lý ở trên */
+}
+
+/* ...rest of global CSS... */
+
+/* Section header styles */
+.section-header {
+    text-align: center;
+    /* Đảm bảo căn giữa toàn bộ header */
+}
+
+.section-header-badge {
+    margin: 0 auto 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+}
+
+.section-header-title {
+    text-align: center;
+    width: 100%;
+}
+
+.section-header-description {
+    color: #efedfdb3;
+    margin: 12px auto 0;
+    max-width: 455px;
+    text-align: center;
+}
+
+.section-header-title-h5,
+.section-header-title-h3,
+.section-header-title-h2,
+.section-header-title-h1 {
+    font-family: AeonikPro, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+    font-feature-settings: unset;
+    font-weight: 500
+}
+
+.section-header-title-h1 {
+    font-size: 72px;
+    line-height: 80px
+}
+
+/* ...rest of section-header CSS... */
+
+/* Testimonials section styles */
+@keyframes hue-rotate {
+    0% {
+        filter: hue-rotate(0deg)
+    }
+
+    to {
+        filter: hue-rotate(360deg)
+    }
+}
+
+.testimonials {
+    padding-top: 108px;
+    padding-bottom: 72px;
+    position: relative
+}
+
+.testimonials .section-header {
+    margin-bottom: 48px
+}
+
+.testimonials-visible .testimonials-row {
+    animation: animateRow1 200s linear infinite
+}
+
+.testimonials-row {
+    display: flex;
+    margin-bottom: 24px;
+    width: max-content
+}
+
+.testimonials-row .testimonials-card:not(:last-child) {
+    margin-right: 24px
+}
+
+.testimonials-row:nth-child(2) {
+    animation-direction: reverse;
+    transform: translateZ(0) translate(calc(-50% - 12px))
+}
+
+.testimonials-items {
+    margin: 0 auto;
+    max-width: 1376px;
+    overflow: hidden;
+    position: relative
+}
+
+.testimonials-items:before {
+    background: linear-gradient(270deg, #030014 0%, rgba(3, 0, 20, .5) 16.67%, rgba(3, 0, 20, 0) 33.33%, rgba(3, 0, 20, 0) 50%, rgba(3, 0, 20, 0) 66.67%, rgba(3, 0, 20, .5) 83.33%, #030014 100%);
+    content: "";
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1
+}
+
+@keyframes animateRow1 {
+    0% {
+        transform: translateZ(0) translate(0)
+    }
+
+    to {
+        transform: translateZ(0) translate(calc(-50% - 12px))
+    }
+}
+
+@media (max-width: 1248px) {
+    .testimonials-items:before {
+        content: unset
+    }
+}
+
+/* Heart animation styles */
+.testimonials-heart {
+    width: 100%;
+    max-width: 602px; /* hoặc bỏ nếu muốn luôn 100% */
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 72px;
+    pointer-events: none;
+    height: 557px;
+}
+
+.testimonials-heart-image,
+.testimonials-heart-animation {
+    height: 100%;
+    width: 100%
+}
+
+.testimonials-heart-animation {
+    left: 0;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    position: absolute;
+    top: 0
+}
+
+.testimonials-heart-animation div {
+    animation: 5s linear infinite;
+    display: flex;
+    height: 120%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transition: .45s linear transform;
+    width: 200%
+}
+
+.testimonials-heart-animation div:before,
+.testimonials-heart-animation div:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%
+}
+
+.testimonials-heart-animation:nth-child(1) div {
+    animation-name: testimonialsHeartLeftAnimation;
+    transform: translate(-50%, -50%) rotate(-180deg)
+}
+
+.testimonials-heart-animation:nth-child(1) div:before {
+    background: conic-gradient(from 180deg at 99.99% 49.95%, rgba(177, 218, 255, 0) -202.43deg, rgba(177, 218, 255, 0) 26.8deg, #b1daff 89.95deg, rgba(177, 218, 255, 0) 157.57deg, rgba(177, 218, 255, 0) 386.8deg)
+}
+
+.testimonials-heart-animation:nth-child(2) div {
+    animation-delay: 1s;
+    animation-name: testimonialsHeartRightAnimation;
+    transform: translate(-50%, -50%) rotate(180deg)
+}
+
+.testimonials-heart-animation:nth-child(2) div:after {
+    background: conic-gradient(from 0deg at .01% 49.95%, rgba(201, 177, 255, 0) -202.43deg, rgba(201, 177, 255, 0) 26.8deg, #c9b1ff 89.95deg, rgba(201, 177, 255, 0) 157.57deg, rgba(201, 177, 255, 0) 386.8deg)
+}
+
+.testimonials-heart .rising-stars {
+    height: 260px;
+    left: 50%;
+    -webkit-mask-image: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, .8) 25%, #d9d9d9 50%, rgba(217, 217, 217, .8) 75%, rgba(217, 217, 217, 0) 100%);
+    mask-image: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, .8) 25%, #d9d9d9 50%, rgba(217, 217, 217, .8) 75%, rgba(217, 217, 217, 0) 100%);
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    position: absolute;
+    top: -16px;
+    transform: translate(-50%);
+    width: 936px
+}
+
+@keyframes testimonialsHeartLeftAnimation {
+    0% {
+        transform: translate(-50%, -50%) rotate(-180deg)
+    }
+
+    60%,
+    to {
+        transform: translate(-50%, -50%) rotate(-540deg)
+    }
+}
+
+@keyframes testimonialsHeartRightAnimation {
+    0% {
+        transform: translate(-50%, -50%) rotate(180deg)
+    }
+
+    60%,
+    to {
+        transform: translate(-50%, -50%) rotate(540deg)
+    }
+}
+
+@media (max-width: 1248px) {
+    .testimonials-heart-animation {
+        display: none
+    }
+}
+
+/* Testimonials card styles */
+.testimonials-card-tag,
+.testimonials-card-name,
+.testimonials-card-content {
+    font-feature-settings: "ss01" on, "cv10" on, "calt" off, "liga" off
+}
+
+.testimonials-card-name,
+.testimonials-card-content {
+    font-size: 16px;
+    line-height: 24px
+}
+
+.testimonials-card-name {
+    font-weight: 500
+}
+
+.testimonials-card-tag {
+    font-size: 14px;
+    line-height: 20px
+}
+
+.testimonials-card {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    background: radial-gradient(57.89% 132% at 65.79% -35%, rgba(120, 123, 255, .06) 0%, rgba(120, 123, 255, 0) 100%), linear-gradient(180deg, rgba(255, 255, 255, 0) 54.17%, rgba(255, 255, 255, .04) 100%), rgba(255, 255, 255, .01);
+    border-radius: 16px;
+    padding: 24px 28px;
+    position: relative;
+    width: 480px
+}
+
+.testimonials-card {
+    width: 411px !important;
+    max-width: 411px;
+    min-width: 411px;
+    box-sizing: border-box;
+    padding: 16px 12px;
+}
+
+.testimonials-card:before {
+    background: linear-gradient(180deg, rgba(255, 255, 255, .04) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .04));
+    border-radius: inherit;
+    content: "";
+    inset: 0;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    padding: 1px;
+    pointer-events: none;
+    position: absolute
+}
+
+.testimonials-card-top {
+    align-items: center;
+    display: flex;
+    margin-bottom: 24px
+}
+
+.testimonials-card-avatar {
+    border-radius: 50%;
+    height: 44px;
+    margin-right: 16px;
+    width: 44px
+}
+
+.testimonials-card-name {
+    color: #f4f0ff
+}
+
+.testimonials-card-tag {
+    color: #efedfd99
+}
+
+.testimonials-card-content {
+    color: #efedfdb3
+}
+
+.testimonials-card-content a {
+    color: #9382ff
+}
+
+/* Animation for testimonials row */
+.testimonials-row {
+    display: flex;
+    width: max-content;
+}
+
+.testimonials-row.animate-left {
+    animation: slide-left 120s linear infinite;
+}
+
+.testimonials-row.animate-right {
+    animation: slide-right 120s linear infinite;
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.testimonials-items {
+    overflow: hidden;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+
+    .testimonials-row.animate-left,
+    .testimonials-row.animate-right {
+        animation-duration: 210s;
+    }
+}

@@ -1,554 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us" q:render="ssr" q:container="paused" q:version="0.103.0" q:base="/home/build/" q:locale>
 
-<head >
-  <meta charSet="utf-8" >
-  <style>
-   
-    :root {
-      --swiper-theme-color: #007aff
-    }
-
-    body {
-      background-color: #030014;
-      color: #fff;
-      font-family: Inter V, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
-      overflow-y: hidden;
-      width: 100vw
-    }
-
-    @media (max-width: 1248px) {
-      body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif
-      }
-    }
-
-  
-    html,
-    body {
-      overflow-x: hidden;
-      position: relative
-    }
-
-    ::-moz-selection {
-      background: rgba(147, 130, 255, .5);
-      color: #fff;
-      -webkit-text-fill-color: #fff
-    }
-
-    ::selection {
-      background: rgba(147, 130, 255, .5);
-      color: #fff;
-      -webkit-text-fill-color: #fff
-    }
-
-    ::-webkit-scrollbar {
-      width: 5px
-    }
-
-    ::-webkit-scrollbar-track {
-      background: inherit
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, .05);
-      border-radius: 99px
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: rgba(255, 255, 255, .1)
-    }
-
-    *:focus {
-      outline: none
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    body {
-      margin: 0
-    }
-
-    ul {
-      list-style: none;
-      -webkit-margin-after: 0;
-      margin-block-end: 0;
-      -webkit-margin-before: 0;
-      margin-block-start: 0;
-      padding: 0
-    }
-
-    svg {
-      display: block
-    }
-
-    img {
-      border: 0;
-      display: block;
-      -o-object-fit: cover;
-      object-fit: cover;
-      pointer-events: none;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none
-    }
-
-    button {
-      -webkit-appearance: button;
-      -moz-appearance: button;
-      appearance: button;
-      background-color: transparent;
-      border: 0;
-      cursor: pointer;
-      text-transform: none
-    }
-
-    button,
-    input {
-      font-family: inherit;
-      font-size: 100%;
-      line-height: normal;
-      margin: 0;
-      vertical-align: baseline
-    }
-
-    button::-moz-focus-inner,
-    input::-moz-focus-inner {
-      border: 0;
-      padding: 0
-    }
-
-    button[disabled],
-    input[disabled] {
-      cursor: default
-    }
-
-    * {
-      box-sizing: border-box;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility
-    }
-
-    .container,
-    .container-md,
-    .container-sm,
-    .container-lg {
-      margin: 0 auto
-    }
-
-    .container-lg {
-      max-width: 1296px
-    }
-
-    .container {
-      max-width: 1248px
-    }
-
-    .container-md {
-      max-width: 1200px
-    }
-
-    .container-sm {
-      max-width: 1128px
-    }
-
-    @media (max-width: 1248px) {
-
-      .container,
-      .container-md {
-        max-width: 358px
-      }
-
-      .container-sm {
-        max-width: 342px
-      }
-    }
-
-    @media (max-width: 390px) {
-
-      .container,
-      .container-md,
-      .container-sm {
-        max-width: 100%;
-        padding: 0 4px
-      }
-    }
-  </style>
+<head>
+  <meta charSet="utf-8">
+  <link rel="stylesheet" href="think.css">
 </head>
 
 <body lang="en">
 
-  <style q:style="97kyxk-0" hidden>
-    .section-header-title-h5,
-    .section-header-title-h3,
-    .section-header-title-h2,
-    .section-header-title-h1 {
-      font-family: AeonikPro, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
-      font-feature-settings: unset;
-      font-weight: 500
-    }
-
-    .section-header-title-h1 {
-      font-size: 72px;
-      line-height: 80px
-    }
-
-    .section-header-title-h2 {
-      font-size: 56px;
-      line-height: 64px
-    }
-
-    .section-header-title-h3 {
-      font-size: 48px;
-      line-height: 56px
-    }
-
-    .section-header-title-h5 {
-      font-size: 32px;
-      line-height: 40px
-    }
-
-    .section-header-badge,
-    .section-header-description {
-      font-feature-settings: "ss01" on, "cv10" on, "calt" off, "liga" off
-    }
-
-    .section-header-description {
-      font-size: 16px;
-      line-height: 24px
-    }
-
-    .section-header-badge {
-      font-size: 14px;
-      line-height: 20px
-    }
-
-    .section-header-badge {
-      font-weight: 500
-    }
-
-    @media (max-width: 1248px) {
-      .section-header-title-h1 {
-        font-size: 44px;
-        line-height: 52px
-      }
-    }
-
-    @media (max-width: 1248px) {
-      .section-header-title-h2 {
-        font-size: 40px;
-        line-height: 48px
-      }
-    }
-
-    @media (max-width: 1248px) {
-      .section-header-title-h3 {
-        font-size: 36px;
-        line-height: 40px
-      }
-    }
-
-    @media (max-width: 1248px) {
-      .section-header-title-h5 {
-        font-size: 32px;
-        line-height: 40px
-      }
-    }
-
-    @keyframes hue-rotate {
-      0% {
-        filter: hue-rotate(0deg)
-      }
-
-      to {
-        filter: hue-rotate(360deg)
-      }
-    }
-
-    .section-header {
-      position: relative;
-      z-index: 3
-    }
-
-    .section-header-badge {
-      isolation: isolate;
-      overflow: hidden;
-      align-items: center;
-      -webkit-backdrop-filter: blur(6px);
-      backdrop-filter: blur(6px);
-      border-radius: 32px;
-      box-shadow: inset 0 -7px 11px #a48fff1f;
-      display: flex;
-      margin: 0 auto 12px;
-      padding: 6px 14px 6px 15px;
-      position: relative;
-      width: -moz-max-content;
-      width: max-content
-    }
-
-    .section-header-badge:after {
-      background: linear-gradient(90.01deg, rgba(229, 156, 255, .24) .01%, rgba(186, 156, 255, .24) 50.01%, rgba(156, 178, 255, .24) 100%);
-      border-radius: inherit;
-      content: "";
-      inset: 0;
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      mask-composite: xor;
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      padding: 1px;
-      pointer-events: none;
-      position: absolute
-    }
-
-    .section-header-badge-text {
-      background: linear-gradient(0deg, rgba(255, 255, 255, .4), rgba(255, 255, 255, .4)), linear-gradient(90.01deg, #e59cff .01%, #ba9cff 50.01%, #9cb2ff 100%);
-      background-blend-mode: normal, screen;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent
-    }
-
-    .section-header-title {
-      text-align: center
-    }
-
-    .section-header-title span {
-      background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, .7) 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      -webkit-text-fill-color: transparent;
-      display: block
-    }
-
-    .section-header-title-mobile {
-      display: none
-    }
-
-    .section-header-description {
-      color: #efedfdb3;
-      margin: 12px auto 0;
-      max-width: 455px;
-      text-align: center
-    }
-
-    @media (max-width: 1248px) {
-
-      .section-header br,
-      .section-header-title-desktop {
-        display: none
-      }
-
-      .section-header-title-mobile {
-        display: block
-      }
-    }
-  </style>
-
-  <style q:style="qx28ur-0" hidden>
-    @keyframes hue-rotate {
-      0% {
-        filter: hue-rotate(0deg)
-      }
-
-      to {
-        filter: hue-rotate(360deg)
-      }
-    }
-
-    .testimonials {
-      padding-top: 108px;
-      padding-bottom: 72px;
-      position: relative
-    }
-
-    .testimonials .section-header {
-      margin-bottom: 48px
-    }
-
-    .testimonials-visible .testimonials-row {
-      animation: animateRow1 200s linear infinite
-    }
-
-    .testimonials-row {
-      display: flex;
-      margin-bottom: 24px;
-      width: -moz-max-content;
-      width: max-content
-    }
-
-    .testimonials-row .testimonials-card:not(:last-child) {
-      margin-right: 24px
-    }
-
-    .testimonials-row:nth-child(2) {
-      animation-direction: reverse;
-      transform: translateZ(0) translate(calc(-50% - 12px))
-    }
-
-    .testimonials-items {
-      margin: 0 auto;
-      max-width: 1376px;
-      overflow: hidden;
-      position: relative
-    }
-
-    .testimonials-items:before {
-      background: linear-gradient(270deg, #030014 0%, rgba(3, 0, 20, .5) 16.67%, rgba(3, 0, 20, 0) 33.33%, rgba(3, 0, 20, 0) 50%, rgba(3, 0, 20, 0) 66.67%, rgba(3, 0, 20, .5) 83.33%, #030014 100%);
-      content: "";
-      height: 100%;
-      left: 0;
-      pointer-events: none;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: 1
-    }
-
-    @keyframes animateRow1 {
-      0% {
-        transform: translateZ(0) translate(0)
-      }
-
-      to {
-        transform: translateZ(0) translate(calc(-50% - 12px))
-      }
-    }
-
-    @media (max-width: 1248px) {
-      .testimonials-items:before {
-        content: unset
-      }
-    }
-  </style>
   <section class="testimonials" on:qvisible="q-05b5ec46.js#_hW[0]" q:key="kB_2" q:id="cg">
-    <style q:style="78ufav-0" hidden>
-      @keyframes hue-rotate {
-        0% {
-          filter: hue-rotate(0deg)
-        }
-
-        to {
-          filter: hue-rotate(360deg)
-        }
-      }
-
-      .testimonials-heart {
-        height: 557px;
-        left: 50%;
-        pointer-events: none;
-        position: absolute;
-        top: 72px;
-        transform: translate(-50%);
-        width: 602px
-      }
-
-      .testimonials-heart-image,
-      .testimonials-heart-animation {
-        height: 100%;
-        width: 100%
-      }
-
-      .testimonials-heart-animation {
-        left: 0;
-        -webkit-mask-size: cover;
-        mask-size: cover;
-        position: absolute;
-        top: 0
-      }
-
-      .testimonials-heart-animation div {
-        animation: 5s linear infinite;
-        display: flex;
-        height: 120%;
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transition: .45s linear transform;
-        width: 200%
-      }
-
-      .testimonials-heart-animation div:before,
-      .testimonials-heart-animation div:after {
-        content: "";
-        display: block;
-        height: 100%;
-        width: 100%
-      }
-
-      .testimonials-heart-animation:nth-child(1) div {
-        animation-name: testimonialsHeartLeftAnimation;
-        transform: translate(-50%, -50%) rotate(-180deg)
-      }
-
-      .testimonials-heart-animation:nth-child(1) div:before {
-        background: conic-gradient(from 180deg at 99.99% 49.95%, rgba(177, 218, 255, 0) -202.43deg, rgba(177, 218, 255, 0) 26.8deg, #b1daff 89.95deg, rgba(177, 218, 255, 0) 157.57deg, rgba(177, 218, 255, 0) 386.8deg)
-      }
-
-      .testimonials-heart-animation:nth-child(2) div {
-        animation-delay: 1s;
-        animation-name: testimonialsHeartRightAnimation;
-        transform: translate(-50%, -50%) rotate(180deg)
-      }
-
-      .testimonials-heart-animation:nth-child(2) div:after {
-        background: conic-gradient(from 0deg at .01% 49.95%, rgba(201, 177, 255, 0) -202.43deg, rgba(201, 177, 255, 0) 26.8deg, #c9b1ff 89.95deg, rgba(201, 177, 255, 0) 157.57deg, rgba(201, 177, 255, 0) 386.8deg)
-      }
-
-      .testimonials-heart .rising-stars {
-        height: 260px;
-        left: 50%;
-        -webkit-mask-image: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, .8) 25%, #d9d9d9 50%, rgba(217, 217, 217, .8) 75%, rgba(217, 217, 217, 0) 100%);
-        mask-image: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, .8) 25%, #d9d9d9 50%, rgba(217, 217, 217, .8) 75%, rgba(217, 217, 217, 0) 100%);
-        -webkit-mask-size: cover;
-        mask-size: cover;
-        position: absolute;
-        top: -16px;
-        transform: translate(-50%);
-        width: 936px
-      }
-
-      @keyframes testimonialsHeartLeftAnimation {
-        0% {
-          transform: translate(-50%, -50%) rotate(-180deg)
-        }
-
-        60%,
-        to {
-          transform: translate(-50%, -50%) rotate(-540deg)
-        }
-      }
-
-      @keyframes testimonialsHeartRightAnimation {
-        0% {
-          transform: translate(-50%, -50%) rotate(180deg)
-        }
-
-        60%,
-        to {
-          transform: translate(-50%, -50%) rotate(540deg)
-        }
-      }
-
-      @media (max-width: 1248px) {
-        .testimonials-heart-animation {
-          display: none
-        }
-      }
-    </style>
     <div class="testimonials-heart" q:key="Wu_2">
-      <!-- Thay thế hình trái tim bằng hiệu ứng quả cầu particles -->
       <div id="earth-particles-globe" style="width:100%;height:100%;"></div>
       <div class="testimonials-heart-animations">
         <div style="display:none" class="testimonials-heart-animation" q:key="Yl_0" q:id="cl"></div>
@@ -568,466 +29,220 @@
     </div>
     <div class="section-header" q:key="wx_4" q:id="cr">
       <div class="section-header-badge" q:key="wx_1">
-        <div class="section-header-badge-text">Wall of love</div>
+        <div class="section-header-badge-text">[ ready to get started ]</div>
       </div>
-      <h2 class="section-header-title section-header-title-h2" q:key="wx_2"><span q:key="Loved by thinkers">Loved by
-          thinkers</span></h2>
+      <h2 class="section-header-title section-header-title-h2" q:key="wx_2">
+        <span q:key="Loved by thinkers" style="font-weight:500;font-size:48px;">Học viên nói gì về chúng tôi</span>
+      </h2>
       <p class="section-header-description" q:key="wx_3" q:id="ct">Here’s what people are saying about us</p>
     </div>
     <div class="testimonials-items">
       <div class="testimonials-row animate-left" q:key="0">
-        <style q:style="tga5ni-0" hidden>
-          .testimonials-card-tag,
-          .testimonials-card-name,
-          .testimonials-card-content {
-            font-feature-settings: "ss01" on, "cv10" on, "calt" off, "liga" off
-          }
-
-          .testimonials-card-name,
-          .testimonials-card-content {
-            font-size: 16px;
-            line-height: 24px
-          }
-
-          .testimonials-card-name {
-            font-weight: 500
-          }
-
-          .testimonials-card-tag {
-            font-size: 14px;
-            line-height: 20px
-          }
-
-          @keyframes hue-rotate {
-            0% {
-              filter: hue-rotate(0deg)
-            }
-
-            to {
-              filter: hue-rotate(360deg)
-            }
-          }
-
-          .testimonials-card {
-            -webkit-backdrop-filter: blur(12px);
-            backdrop-filter: blur(12px);
-            background: radial-gradient(57.89% 132% at 65.79% -35%, rgba(120, 123, 255, .06) 0%, rgba(120, 123, 255, 0) 100%), linear-gradient(180deg, rgba(255, 255, 255, 0) 54.17%, rgba(255, 255, 255, .04) 100%), rgba(255, 255, 255, .01);
-            border-radius: 16px;
-            padding: 24px 28px;
-            position: relative;
-            width: 480px
-          }
-
-          .testimonials-card:before {
-            background: linear-gradient(180deg, rgba(255, 255, 255, .04) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .04));
-            border-radius: inherit;
-            content: "";
-            inset: 0;
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask-composite: xor;
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            padding: 1px;
-            pointer-events: none;
-            position: absolute
-          }
-
-          .testimonials-card-top {
-            align-items: center;
-            display: flex;
-            margin-bottom: 24px
-          }
-
-          .testimonials-card-avatar {
-            border-radius: 50%;
-            height: 44px;
-            margin-right: 16px;
-            width: 44px
-          }
-
-          .testimonials-card-name {
-            color: #f4f0ff
-          }
-
-          .testimonials-card-tag {
-            color: #efedfd99
-          }
-
-          .testimonials-card-content {
-            color: #efedfdb3
-          }
-
-          .testimonials-card-content a {
-            color: #9382ff
-          }
-        </style>
-        <div class="testimonials-card" q:key="To_1">
-          <div class="testimonials-card-top"><img height="1" width="1"
-              alt="Avatar of Sean Rose" src class="lazy-image lazy-image-hidden testimonials-card-avatar"
-              on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]" on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0"
-              q:id="cw">
+        <div class="testimonials-card" q:key="To_1" style="width:204px;">
+          <div class="testimonials-card-top"><img height="1" width="1" alt="Avatar" src="avatar-minh.png"
+              class="lazy-image lazy-image-hidden testimonials-card-avatar" on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]"
+              on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0" q:id="cw">
             <div class="testimonials-card-text">
               <div class="testimonials-card-name">Sean Rose</div>
               <div class="testimonials-card-tag">@seanrose</div>
             </div>
           </div>
-          <div class="testimonials-card-content" q:id="cz">Really, really liking <a
-              href="https://reflect.app/">@reflectnotes</a> so far. It's just the right amount of simple/fast for a
-            personal note taking app and does most of the hard work of organizing in the background.</div>
+          <div class="testimonials-card-content" q:id="cz">Ứng dụng rất dễ sử dụng, tốc độ nhanh và giúp tôi tổ chức ghi
+            chú hiệu quả.</div>
         </div>
-        <div class="testimonials-card" q:key="To_1">
-          <div class="testimonials-card-top"><img height="1" width="1"
-              alt="Avatar of Ryan Delk" src class="lazy-image lazy-image-hidden testimonials-card-avatar"
-              on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]" on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0"
-              q:id="d2">
+        <div class="testimonials-card" q:key="To_1" style="width:204px;">
+          <div class="testimonials-card-top"><img height="1" width="1" alt="Avatar" src="avatar-minh.png"
+              class="lazy-image lazy-image-hidden testimonials-card-avatar" on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]"
+              on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0" q:id="d2">
             <div class="testimonials-card-text">
               <div class="testimonials-card-name">Ryan Delk</div>
               <div class="testimonials-card-tag">@delk</div>
             </div>
           </div>
-          <div class="testimonials-card-content" q:id="d5">Don’t take it from me: <a
-              href="https://reflect.app/">@reflectnotes</a> is magic.</div>
+          <div class="testimonials-card-content" q:id="d5">Đừng chỉ nghe tôi nói, hãy tự trải nghiệm. Ứng dụng này thực
+            sự tuyệt vời.</div>
         </div>
-        <div class="testimonials-card" q:key="To_1">
-          <div class="testimonials-card-top"><img height="1" width="1"
-              alt="Avatar of Demetria Giles" src class="lazy-image lazy-image-hidden testimonials-card-avatar"
-              on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]" on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0"
-              q:id="d8">
+        <div class="testimonials-card" q:key="To_1" style="width:204px;">
+          <div class="testimonials-card-top"><img height="1" width="1" alt="Avatar" src="avatar-minh.png"
+              class="lazy-image lazy-image-hidden testimonials-card-avatar" on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]"
+              on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0" q:id="d8">
             <div class="testimonials-card-text">
               <div class="testimonials-card-name">Demetria Giles</div>
               <div class="testimonials-card-tag">@drosewritings</div>
             </div>
           </div>
-          <div class="testimonials-card-content" q:id="db">Playing around with <a
-              href="https://reflect.app/">@reflectnotes</a>. I’m back logging key thoughts, details and soundbites from
-            episodes, books, meetings, articles, etc from the past week. So far, it’s a knowledge worker’s dream come
-            true.</div>
+          <div class="testimonials-card-content" q:id="db">Tôi có thể ghi chú lại các ý tưởng, thông tin quan trọng từ
+            sách, cuộc họp, bài viết... rất tiện lợi.</div>
         </div>
-        <div class="testimonials-card" q:key="To_1">
-          <div class="testimonials-card-top"><img height="1" width="1"
-              alt="Avatar of Flour storm" src class="lazy-image lazy-image-hidden testimonials-card-avatar"
-              on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]" on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0"
-              q:id="de">
+        <div class="testimonials-card" q:key="To_1" style="width:204px;">
+          <div class="testimonials-card-top"><img height="1" width="1" alt="Avatar" src="avatar-minh.png"
+              class="lazy-image lazy-image-hidden testimonials-card-avatar" on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]"
+              on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0" q:id="de">
             <div class="testimonials-card-text">
-              <div class="testimonials-card-name">Flour storm</div>
-              <div class="testimonials-card-tag">@adnan_wahab_</div>
+              <div class="testimonials-card-name">Nguyễn Văn Minh</div>
+              <div class="testimonials-card-tag">@nguyenvanminh</div>
             </div>
           </div>
-          <div class="testimonials-card-content" q:id="dh"><a href="https://twitter.com/maccaw">@maccaw</a> holy shit
-            reflect app design is so good my writing and introspective ability went up 10x since i got it. was using
-            bear/notion before but the simplicity of reflect is beautiful.</div>
+          <div class="testimonials-card-content" q:id="dh">
+            Giảng viên có nhiều kinh nghiệm thực chiến, chia sẻ thẳng thắn chứ không lý thuyết suông.
+          </div>
         </div>
-        <div class="testimonials-card" q:key="To_1">
-          <div class="testimonials-card-top"><img height="1" width="1"
-              alt="Avatar of Sean Rose" src class="lazy-image lazy-image-hidden testimonials-card-avatar"
-              on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]" on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0"
-              q:id="dk">
+        <div class="testimonials-card" q:key="To_1" style="width:204px;">
+          <div class="testimonials-card-top"><img height="1" width="1" alt="Avatar" src="avatar-minh.png"
+              class="lazy-image lazy-image-hidden testimonials-card-avatar" on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]"
+              on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0" q:id="dk">
             <div class="testimonials-card-text">
               <div class="testimonials-card-name">Sean Rose</div>
               <div class="testimonials-card-tag">@seanrose</div>
             </div>
           </div>
-          <div class="testimonials-card-content" q:id="dn">Really, really liking <a
-              href="https://reflect.app/">@reflectnotes</a> so far. It's just the right amount of simple/fast for a
-            personal note taking app and does most of the hard work of organizing in the background.</div>
+          <div class="testimonials-card-content" q:id="dn">Ứng dụng rất dễ sử dụng, tốc độ nhanh và giúp tôi tổ chức ghi
+            chú hiệu quả.</div>
         </div>
-        <div class="testimonials-card" q:key="To_1">
-          <div class="testimonials-card-top"><img height="1" width="1"
-              alt="Avatar of Ryan Delk" src class="lazy-image lazy-image-hidden testimonials-card-avatar"
-              on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]" on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0"
-              q:id="dq">
+        <div class="testimonials-card" q:key="To_1" style="width:204px;">
+          <div class="testimonials-card-top"><img height="1" width="1" alt="Avatar" src="avatar-minh.png"
+              class="lazy-image lazy-image-hidden testimonials-card-avatar" on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]"
+              on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0" q:id="dq">
             <div class="testimonials-card-text">
               <div class="testimonials-card-name">Ryan Delk</div>
               <div class="testimonials-card-tag">@delk</div>
             </div>
           </div>
-          <div class="testimonials-card-content" q:id="dt">Don’t take it from me: <a
-              href="https://reflect.app/">@reflectnotes</a> is magic.</div>
+          <div class="testimonials-card-content" q:id="dt">Đừng chỉ nghe tôi nói, hãy tự trải nghiệm. Ứng dụng này thực
+            sự tuyệt vời.</div>
         </div>
-        <div class="testimonials-card" q:key="To_1">
-          <div class="testimonials-card-top"><img height="1" width="1"
-              alt="Avatar of Demetria Giles" src class="lazy-image lazy-image-hidden testimonials-card-avatar"
-              on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]" on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0"
-              q:id="dw">
+        <div class="testimonials-card" q:key="To_1" style="width:204px;">
+          <div class="testimonials-card-top"><img height="1" width="1" alt="Avatar" src="avatar-minh.png"
+              class="lazy-image lazy-image-hidden testimonials-card-avatar" on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]"
+              on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0" q:id="dw">
             <div class="testimonials-card-text">
               <div class="testimonials-card-name">Demetria Giles</div>
               <div class="testimonials-card-tag">@drosewritings</div>
             </div>
           </div>
-          <div class="testimonials-card-content" q:id="dz">Playing around with <a
-              href="https://reflect.app/">@reflectnotes</a>. I’m back logging key thoughts, details and soundbites from
-            episodes, books, meetings, articles, etc from the past week. So far, it’s a knowledge worker’s dream come
-            true.</div>
+          <div class="testimonials-card-content" q:id="dz">Tôi có thể ghi chú lại các ý tưởng, thông tin quan trọng từ
+            sách, cuộc họp, bài viết... rất tiện lợi.</div>
         </div>
-        <div class="testimonials-card" q:key="To_1">
-          <div class="testimonials-card-top"><img height="1" width="1"
-              alt="Avatar of Flour storm" src class="lazy-image lazy-image-hidden testimonials-card-avatar"
-              on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]" on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0"
-              q:id="e2">
+        <div class="testimonials-card" q:key="To_1" style="width:204px;">
+          <div class="testimonials-card-top"><img height="1" width="1" alt="Avatar" src="avatar-minh.png"
+              class="lazy-image lazy-image-hidden testimonials-card-avatar" on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]"
+              on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0" q:id="e2">
             <div class="testimonials-card-text">
-              <div class="testimonials-card-name">Flour storm</div>
-              <div class="testimonials-card-tag">@adnan_wahab_</div>
+              <div class="testimonials-card-name">Nguyễn Văn Minh</div>
+              <div class="testimonials-card-tag">@nguyenvanminh</div>
             </div>
           </div>
-          <div class="testimonials-card-content" q:id="e5"><a href="https://twitter.com/maccaw">@maccaw</a> holy shit
-            reflect app design is so good my writing and introspective ability went up 10x since i got it. was using
-            bear/notion before but the simplicity of reflect is beautiful.</div>
+          <div class="testimonials-card-content" q:id="e5">
+            Giảng viên có nhiều kinh nghiệm thực chiến, chia sẻ thẳng thắn chứ không lý thuyết suông.
+          </div>
         </div>
       </div>
       <div class="testimonials-row animate-right" q:key="1">
-        <div class="testimonials-card" q:key="To_1">
-          <div class="testimonials-card-top"><img height="1" width="1"
-              alt="Avatar of Jeremy McPeak" src class="lazy-image lazy-image-hidden testimonials-card-avatar"
-              on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]" on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0"
-              q:id="e8">
+        <div class="testimonials-card" q:key="To_1" style="width:204px;">
+          <div class="testimonials-card-top"><img height="1" width="1" alt="Avatar" src="avatar-minh.png"
+              class="lazy-image lazy-image-hidden testimonials-card-avatar" on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]"
+              on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0" q:id="e8">
             <div class="testimonials-card-text">
               <div class="testimonials-card-name">Jeremy McPeak</div>
               <div class="testimonials-card-tag">@jwmcpeak</div>
             </div>
           </div>
-          <div class="testimonials-card-content" q:id="eb">I just received an invite to <a
-              href="https://reflect.app/">@reflectnotes</a>, and holy crap! It is well thought out, and I can see this
-            being my note-taking platform going forward. Well done! I'm looking forward to seeing how the app
-            progresses.</div>
+          <div class="testimonials-card-content" q:id="eb">
+            Giảng viên có nhiều kinh nghiệm thực chiến, chia sẻ thẳng thắn chứ không lý thuyết suông.
+          </div>
         </div>
-        <div class="testimonials-card" q:key="To_1">
-          <div class="testimonials-card-top"><img height="1" width="1"
-              alt="Avatar of Fabrizio Rinaldi" src class="lazy-image lazy-image-hidden testimonials-card-avatar"
-              on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]" on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0"
-              q:id="ee">
+        <div class="testimonials-card" q:key="To_1" style="width:204px;">
+          <div class="testimonials-card-top"><img height="1" width="1" alt="Avatar" src="avatar-minh.png"
+              class="lazy-image lazy-image-hidden testimonials-card-avatar" on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]"
+              on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0" q:id="ee">
             <div class="testimonials-card-text">
               <div class="testimonials-card-name">Fabrizio Rinaldi</div>
               <div class="testimonials-card-tag">@linuz90</div>
             </div>
           </div>
-          <div class="testimonials-card-content" q:id="eh">I’m keeping <a href="https://reflect.app/">@reflectnotes</a>
-            open *all* the time, and I’m using both for simple journaling, and long form writing. It’s rare to see a
-            single app work so well for both.</div>
+          <div class="testimonials-card-content" q:id="eh">Tôi luôn mở ứng dụng để ghi nhật ký và viết bài dài. Hiếm có
+            ứng dụng nào làm tốt cả hai như vậy.</div>
         </div>
-        <div class="testimonials-card" q:key="To_1">
-          <div class="testimonials-card-top"><img height="1" width="1"
-              alt="Avatar of Jonathan Simcoe" src class="lazy-image lazy-image-hidden testimonials-card-avatar"
-              on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]" on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0"
-              q:id="ek">
+        <div class="testimonials-card" q:key="To_1" style="width:204px;">
+          <div class="testimonials-card-top"><img height="1" width="1" alt="Avatar" src="avatar-minh.png"
+              class="lazy-image lazy-image-hidden testimonials-card-avatar" on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]"
+              on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0" q:id="ek">
             <div class="testimonials-card-text">
               <div class="testimonials-card-name">Jonathan Simcoe</div>
               <div class="testimonials-card-tag">@jdsimcoe</div>
             </div>
           </div>
-          <div class="testimonials-card-content" q:id="en">All righty. I have to give a massive shout-out to <a
-              href="https://twitter.com/maccaw">@maccaw</a> for pioneering <a
-              href="https://reflect.app/">@reflectnotes</a>. It has already matured to a point where it is a daily
-            driver for me. The speed, focus, and attention to detail (especially perfect bits of structured data) is
-            superb.</div>
+          <div class="testimonials-card-content" q:id="en">Tôi đánh giá cao sự tập trung, tốc độ và sự tỉ mỉ trong từng
+            chi tiết của ứng dụng.</div>
         </div>
-        <div class="testimonials-card" q:key="To_1">
-          <div class="testimonials-card-top"><img height="1" width="1"
-              alt="Avatar of Chris" src class="lazy-image lazy-image-hidden testimonials-card-avatar"
-              on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]" on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0"
-              q:id="eq">
+        <div class="testimonials-card" q:key="To_1" style="width:204px;">
+          <div class="testimonials-card-top"><img height="1" width="1" alt="Avatar" src="avatar-minh.png"
+              class="lazy-image lazy-image-hidden testimonials-card-avatar" on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]"
+              on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0" q:id="eq">
             <div class="testimonials-card-text">
               <div class="testimonials-card-name">Chris</div>
               <div class="testimonials-card-tag">@Mr_Chris_L</div>
             </div>
           </div>
-          <div class="testimonials-card-content" q:id="et">Absolutely loving <a
-              href="https://reflect.app/">@reflectnotes</a>. The visualisation of the neural network is superb and
-            seeing it develop makes me want to take daily notes. The back-linking makes associations effortless. Hats
-            off to <a href="https://twitter.com/maccaw">@maccaw</a> and his team, it’s exactly what I’ve been looking
-            for🙏</div>
+          <div class="testimonials-card-content" q:id="et">Tôi rất thích tính năng liên kết ghi chú, giúp tôi dễ dàng
+            kết nối các ý tưởng với nhau.</div>
         </div>
-        <div class="testimonials-card" q:key="To_1">
-          <div class="testimonials-card-top"><img height="1" width="1"
-              alt="Avatar of Jeremy McPeak" src class="lazy-image lazy-image-hidden testimonials-card-avatar"
-              on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]" on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0"
-              q:id="ew">
+        <div class="testimonials-card" q:key="To_1" style="width:204px;">
+          <div class="testimonials-card-top"><img height="1" width="1" alt="Avatar" src="avatar-minh.png"
+              class="lazy-image lazy-image-hidden testimonials-card-avatar" on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]"
+              on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0" q:id="ew">
             <div class="testimonials-card-text">
               <div class="testimonials-card-name">Jeremy McPeak</div>
               <div class="testimonials-card-tag">@jwmcpeak</div>
             </div>
           </div>
-          <div class="testimonials-card-content" q:id="ez">I just received an invite to <a
-              href="https://reflect.app/">@reflectnotes</a>, and holy crap! It is well thought out, and I can see this
-            being my note-taking platform going forward. Well done! I'm looking forward to seeing how the app
-            progresses.</div>
+          <div class="testimonials-card-content" q:id="ez">
+            Giảng viên có nhiều kinh nghiệm thực chiến, chia sẻ thẳng thắn chứ không lý thuyết suông.
+          </div>
         </div>
-        <div class="testimonials-card" q:key="To_1">
-          <div class="testimonials-card-top"><img height="1" width="1"
-              alt="Avatar of Fabrizio Rinaldi" src class="lazy-image lazy-image-hidden testimonials-card-avatar"
-              on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]" on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0"
-              q:id="f2">
+        <div class="testimonials-card" q:key="To_1" style="width:204px;">
+          <div class="testimonials-card-top"><img height="1" width="1" alt="Avatar" src="avatar-minh.png"
+              class="lazy-image lazy-image-hidden testimonials-card-avatar" on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]"
+              on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0" q:id="f2">
             <div class="testimonials-card-text">
               <div class="testimonials-card-name">Fabrizio Rinaldi</div>
               <div class="testimonials-card-tag">@linuz90</div>
             </div>
           </div>
-          <div class="testimonials-card-content" q:id="f5">I’m keeping <a href="https://reflect.app/">@reflectnotes</a>
-            open *all* the time, and I’m using both for simple journaling, and long form writing. It’s rare to see a
-            single app work so well for both.</div>
+          <div class="testimonials-card-content" q:id="f5">Tôi luôn mở ứng dụng để ghi nhật ký và viết bài dài. Hiếm có
+            ứng dụng nào làm tốt cả hai như vậy.</div>
         </div>
-        <div class="testimonials-card" q:key="To_1">
-          <div class="testimonials-card-top"><img height="1" width="1"
-              alt="Avatar of Jonathan Simcoe" src class="lazy-image lazy-image-hidden testimonials-card-avatar"
-              on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]" on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0"
-              q:id="f8">
+        <div class="testimonials-card" q:key="To_1" style="width:204px;">
+          <div class="testimonials-card-top"><img height="1" width="1" alt="Avatar" src="avatar-minh.png"
+              class="lazy-image lazy-image-hidden testimonials-card-avatar" on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]"
+              on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0" q:id="f8">
             <div class="testimonials-card-text">
               <div class="testimonials-card-name">Jonathan Simcoe</div>
               <div class="testimonials-card-tag">@jdsimcoe</div>
             </div>
           </div>
-          <div class="testimonials-card-content" q:id="fb">All righty. I have to give a massive shout-out to <a
-              href="https://twitter.com/maccaw">@maccaw</a> for pioneering <a
-              href="https://reflect.app/">@reflectnotes</a>. It has already matured to a point where it is a daily
-            driver for me. The speed, focus, and attention to detail (especially perfect bits of structured data) is
-            superb.</div>
+          <div class="testimonials-card-content" q:id="fb">Tôi đánh giá cao sự tập trung, tốc độ và sự tỉ mỉ trong từng
+            chi tiết của ứng dụng.</div>
         </div>
-        <div class="testimonials-card" q:key="To_1">
-          <div class="testimonials-card-top"><img height="1" width="1"
-              alt="Avatar of Chris" src class="lazy-image lazy-image-hidden testimonials-card-avatar"
-              on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]" on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0"
-              q:id="fe">
+        <div class="testimonials-card" q:key="To_1" style="width:204px;">
+          <div class="testimonials-card-top"><img height="1" width="1" alt="Avatar" src="avatar-minh.png"
+              class="lazy-image lazy-image-hidden testimonials-card-avatar" on:load="q-13c4caf4.js#s_Deti9nTnz3Q[0]"
+              on:qvisible="q-13c4caf4.js#_hW[1]" q:key="BO_0" q:id="fe">
             <div class="testimonials-card-text">
               <div class="testimonials-card-name">Chris</div>
               <div class="testimonials-card-tag">@Mr_Chris_L</div>
             </div>
           </div>
-          <div class="testimonials-card-content" q:id="fh">Absolutely loving <a
-              href="https://reflect.app/">@reflectnotes</a>. The visualisation of the neural network is superb and
-            seeing it develop makes me want to take daily notes. The back-linking makes associations effortless. Hats
-            off to <a href="https://twitter.com/maccaw">@maccaw</a> and his team, it’s exactly what I’ve been looking
-            for🙏</div>
+          <div class="testimonials-card-content" q:id="fh">Tôi rất thích tính năng liên kết ghi chú, giúp tôi dễ dàng
+            kết nối các ý tưởng với nhau.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <style>
-    .testimonials-row {
-      display: flex;
-      width: max-content;
-    }
-    .testimonials-row.animate-left {
-      animation: slide-left 120s linear infinite;
-    }
-    .testimonials-row.animate-right {
-      animation: slide-right 120s linear infinite;
-    }
-    @keyframes slide-left {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    @keyframes slide-right {
-      0% { transform: translateX(-50%); }
-      100% { transform: translateX(0); }
-    }
-    .testimonials-items {
-      overflow: hidden;
-      position: relative;
-    }
-    @media (max-width: 600px) {
-      .testimonials-row.animate-left,
-      .testimonials-row.animate-right {
-        animation-duration: 60s;
-      }
-    }
-  </style>
-
   <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.globe.min.js"></script>
-<script>
-  VANTA.GLOBE({
-    el: ".about-globe-canvas",
-    mouseControls: true,
-    touchControls: true,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    scale: 1.00,
-    scaleMobile: 1.00
-  })
-</script>
-
-  <!-- Thêm Three.js và hiệu ứng particles globe -->
   <script src="https://unpkg.com/three@0.152.2/build/three.min.js"></script>
-  <script>
-    // Scene, Camera, Renderer cho hiệu ứng quả cầu particles
-    const globeContainer = document.getElementById('earth-particles-globe');
-    const width = globeContainer.offsetWidth;
-    const height = globeContainer.offsetHeight;
-
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(45, width/height, 0.1, 1000);
-    camera.position.z = 300;
-
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setClearColor(0x000000, 0); // nền trong suốt
-    renderer.setSize(width, height);
-    globeContainer.appendChild(renderer.domElement);
-
-    // Tải ảnh bản đồ Trái Đất (ảnh phẳng)
-    const earthMapURL = 'https://threejs.org/examples/textures/land_ocean_ice_cloud_2048.jpg';
-    const loader = new THREE.TextureLoader();
-    loader.load(earthMapURL, (texture) => {
-      const image = texture.image;
-      const canvas = document.createElement('canvas');
-      canvas.width = image.width;
-      canvas.height = image.height;
-      const ctx = canvas.getContext('2d');
-      ctx.drawImage(image, 0, 0);
-      const imageData = ctx.getImageData(0, 0, image.width, image.height).data;
-
-      const radius = 120;
-      const numPoints = 20000;
-      const positions = [];
-
-      for (let i = 0; i < numPoints; i++) {
-        const theta = Math.random() * 2 * Math.PI;
-        const phi = Math.acos(2 * Math.random() - 1);
-
-        const u = theta / (2 * Math.PI);
-        const v = phi / Math.PI;
-        const xPix = Math.floor(u * image.width);
-        const yPix = Math.floor((1 - v) * image.height);
-        const idx = (yPix * image.width + xPix) * 4;
-
-        const r = imageData[idx];
-        const g = imageData[idx + 1];
-        const b = imageData[idx + 2];
-
-        if (!(b > g && b > r)) {
-          const x = radius * Math.sin(phi) * Math.cos(theta);
-          const y = radius * Math.cos(phi);
-          const z = radius * Math.sin(phi) * Math.sin(theta);
-          positions.push(x, y, z);
-        }
-      }
-
-      const geometry = new THREE.BufferGeometry();
-      geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
-
-      const material = new THREE.PointsMaterial({
-        color: 0xffffff,
-        size: 0.7
-      });
-
-      const earthPoints = new THREE.Points(geometry, material);
-      scene.add(earthPoints);
-
-      function animate() {
-        requestAnimationFrame(animate);
-        earthPoints.rotation.y += 0.002;
-        renderer.render(scene, camera);
-      }
-      animate();
-    });
-
-    window.addEventListener('resize', () => {
-      const w = globeContainer.offsetWidth;
-      const h = globeContainer.offsetHeight;
-      camera.aspect = w / h;
-      camera.updateProjectionMatrix();
-      renderer.setSize(w, h);
-    });
-  </script>
+  <script src="think.js"></script>
 </body>
 
 
